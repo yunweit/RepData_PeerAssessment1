@@ -79,7 +79,7 @@ activity_full <- cbind(activity_full, day)
 weekday_activity <- activity_full[activity_full$day == "weekdays", ]
 weekend_activity <- activity_full[activity_full$day == "weekends", ]
 
-par(mfrow = c(1,2))
+par(mfrow = c(2,1))
 step_pinterval_weekday <- tapply(weekday_activity$steps,
                                  weekday_activity$interval, 
                                  mean, na.rm = TRUE)
